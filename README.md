@@ -23,11 +23,17 @@ Usage
 MySql db is used as source of Points data, read, geohashed, and saved in Mongodb
 
 function insertGeohash() {
+
 		----
+		
 		----
+		
 		----
+		
 		$collection = $this->mongo_db->db->selectCollection('geohashcoll'); //select collection name for mongodb
+		
 		$collection->insert($insert);	//insert data into geohashcoll collection of mongodb
+		
 }	
 
 Support
