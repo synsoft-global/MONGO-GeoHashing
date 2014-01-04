@@ -14,9 +14,9 @@ Requirements
 Manual Installation
 -------------------------------------------------------------
 
-   1)Download Package
+1) Download Package
    
-   2)Move into target directories
+2) Move into target directories
 
 Usage
 -------------------------------------------------------------
