@@ -17,7 +17,7 @@ body {
 </head>
 <body style="margin:0px; padding:0px;" onLoad="initialize()">
   <input type="hidden" id="pointerlimit" name="pointerlimit" value="0">
-  <div id="map_canvas"></div>
+  <div id="map_canvas" style="width: 100%; height:90%;"></div>
   <!--<div id="listing"><table id="resultsTable"><tbody id="results"></tbody></table></div>-->
 </body>
 </html>
@@ -29,9 +29,11 @@ body {
 	var infoWindow = new google.maps.InfoWindow;
   
 	function initialize() {
-		var myLatlng = new google.maps.LatLng(48.870895, 2.779249);
+		var myLatlng = new google.maps.LatLng(23.870895, 1.779249);
+		//var myLatlng = new google.maps.LatLng(0, 0);
 		var myOptions = {
-		  zoom: 2,
+		  zoom: 3,
+		  minZoom: 1,
 		  center: myLatlng,
 		  mapTypeId: google.maps.MapTypeId.ROADMAP
 		}
@@ -58,7 +60,8 @@ body {
 		if(results.total){
 		for(i=0;i<obj.length;i++){
 			//console.log(obj[i].name);
-			var html="<b>Name:</b>"+obj[i].name+"<br><b>Address:</b>"+obj[i].address+"<br><b>Latitude:</b>"+obj[i].lat+"<br><b>Longitude:</b>"+obj[i].lng+"<br><b>Geohash:</b>"+obj[i].geohashcode;
+			//var html="<b>Name: </b>"+obj[i].name+"<br><b>Address:</b>"+obj[i].address+"<br><b>Latitude:</b>"+obj[i].lat+"<br><b>Longitude:</b>"+obj[i].lng+"<br><b>Geohash:</b>"+obj[i].geohashcode;
+			var html="<b>GeoHash : </b>"+obj[i].geohashcode+"<br><b>Latitude : </b>"+obj[i].lat+"<br><b>Longitude : </b>"+obj[i].lng+"<br><b>Name : </b>"+obj[i].name+"<br><b>Address : </b>"+obj[i].address;
 				var marker = new google.maps.Marker({
 				position: new google.maps.LatLng(obj[i].lat, obj[i].lng),				
 				map: map
