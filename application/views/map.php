@@ -7,8 +7,8 @@ body {
 }
 #map_canvas {
   position: absolute;
-  width: 950px;
-  height: 400px;
+  /* width: 950px;
+  height: 400px; */
   top: 25px;
   left: 0px;
   border: 1px solid grey;
