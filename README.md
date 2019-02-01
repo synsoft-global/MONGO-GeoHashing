@@ -34,7 +34,4 @@ function insertGeohash() {
 		
 }	
 
-Support
--------------------------------------------------------------
 
-If you have an issues, please send me an email at "mukeshpal@synsoftglobal.com" and if you still need help, open a bug report in GitHub's issue tracker.
